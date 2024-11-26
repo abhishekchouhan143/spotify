@@ -82,7 +82,7 @@ const palyMusic = (track, pause = false) => {
 
 // START CREATE A displayAlbums function
 async function displayAlbums() {
-  let a = await fetch(`https://abhishekchouhan143.github.io/spotify/songs/ncs`);
+  let a = await fetch(`https://abhishekchouhan143.github.io/spotify/songs/ncs/songs1.mp3`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
