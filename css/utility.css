@@ -1,0 +1,42 @@
+.border{
+   border: 2px solid red;
+   margin: 3px;
+}
+.flex{
+   display: flex;
+}
+.justify-center{
+   justify-content: center;
+}
+.items-center{
+   align-items: center;
+}
+.bg-black{
+   background-color: black;
+   color: white;
+}
+.invert{
+   filter: invert(1);
+}
+.bg-grey{
+   background-color: #121212;
+}
+.rounded{
+   border-radius:7px ;
+}
+.m-1{
+  margin-right: 0;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+.p-1{
+   padding: 8px;
+}
+.fixed{
+   position: sticky;
+   top: 0;
+}
+.play-btn{
+   width: 30px;
+}

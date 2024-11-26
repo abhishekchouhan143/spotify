@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="svg/faveicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- container start / left / right -->
+    <div class="container flex">
+      <!-- left start  -->
+      <div class="left bg-black">
+        <!-- home start  -->
+        <div class="home bg-grey p-1 m-1 rounded">
+          <div class="close">
+            <img class="invert" src="svg/close.svg" alt="close" />
+          </div>
+          <div class="logo">
+            <img class="invert" src="svg/logo.svg" alt="logo" /><span
+              >Spotify</span
+            >
+          </div>
+          <ul>
+            <li><img class="invert" src="svg/home.svg" alt="home" />Home</li>
+            <li>
+              <img class="invert" src="svg/search.svg" alt="search" />Search
+            </li>
+          </ul>
+        </div>
+        <!-- home end  -->
+
+        <!-- library start  -->
+        <div class="library bg-grey rounded m-1 p-1">
+          <!-- heading start  -->
+          <div class="heading">
+            <img class="invert" src="svg/library.svg" alt="library image" />
+            <h3>Your Library</h3>
+            <div class="plus-icon invert">
+              <img src="svg/plus.svg" alt="plus icon" />
+            </div>
+          </div>
+          <!-- heading end  -->
+
+          <!-- songList start  -->
+          <div class="songList">
+            <ul></ul>
+          </div>
+          <!-- songList end -->
+
+          <!-- footer start  -->
+          <div class="footer m-1">
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+            </div>
+
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                >Cookies</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                >AboutAds</a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/accessibility/"
+                >Accessibility</a
+              >
+            </div>
+          </div>
+          <!-- footer end  -->
+        </div>
+        <!-- library end  -->
+      </div>
+      <!-- left end  -->
+
+      <!-- right start  -->
+      <div class="right bg-grey rounded">
+        <div class="header">
+          <!-- nav start -->
+          <div class="nav">
+            <img
+              class="invert hamburger"
+              src="svg/hamburger.svg"
+              alt="hamburger"
+            />
+            <img src="svg/leftarrow.svg" alt="arrow" />
+            <img src="svg/rightarrow.svg" alt="arrow" />
+          </div>
+          <!-- nav end  -->
+
+          <!-- buttons start -->
+          <div class="buttons">
+            <button class="signupbtn">Sign up</button>
+            <button class="loginbtn">Log in</button>
+          </div>
+          <!-- buttons end  -->
+        </div>
+        <!-- header end  -->
+
+        <!-- spotify-playlist start  -->
+        <div class="spotify-playlist">
+          <h2 class="mr">Popular albums</h2>
+          <div class="cardContainer">
+            <!-- ncc songs start  -->
+            <div data-folder="ncs" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e0217130efe6a547ce87146fb32"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>No Copy Rights</h3>
+              <p>Most beautiful songs</p>
+            </div>
+            <!-- ncc song end  -->
+
+            <!-- card-1 start  -->
+            <div data-folder="ashiqui" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e026404721c1943d5069f0805f3"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>Aashiqui 2</h3>
+              <p>Jeet Gannguli , Ankit Tiwari , Mithoon</p>
+            </div>
+            <!-- card-1 end  -->
+            <!-- card-2 start  -->
+            <div data-folder="honney" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e02aad3f4b601ae8763b3fc4e88"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>GLORY</h3>
+              <p>Yo Yo Honey Singh</p>
+            </div>
+            <!-- card-2 end  -->
+            <!-- card-3 start  -->
+            <div data-folder="romance" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e02a1c00de3e08bfde2c646c7a3"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj"
+              />
+
+              <h3>Best of Romance</h3>
+              <p>Atif Aslam,Pritam</p>
+            </div>
+            <!-- card-3 end  -->
+
+            <!-- card-4 start  -->
+            <div data-folder="jabWeMet" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e0252fe6875028c892308ffc2f7"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>Jab We Met</h3>
+              <p>Various Artists</p>
+            </div>
+            <!-- card-4 end  -->
+            <!-- card-5 start  -->
+            <div data-folder="animal" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>ANIMAL</h3>
+              <p>Manan Bhardwaj</p>
+            </div>
+            <!-- card-5 end  -->
+            <!-- card-6 start  -->
+            <div data-folder="chuttamalle" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e026d97b3dc154dfdbe2321fb5c"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>Chuttamalle (From "Devara Part 1")</h3>
+              <p>Shilpa Rao , Anirudh Ravichander , Ramajogayya Sastry</p>
+            </div>
+            <!-- card-6 end  -->
+            <!-- card-7 start  -->
+            <div data-folder="sajni" class="card">
+              <div class="play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 100 100"
+                >
+                  <!-- Green Background Circle -->
+                  <circle cx="50" cy="50" r="50" fill="#1DB954" />
+                  <!-- Play Button -->
+                  <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+              </div>
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj"
+              />
+              <h3>Sajni (From "Laapataa Ladies")</h3>
+              <p>Prashant Pandey,Arijit Singh</p>
+            </div>
+            <!-- card-7 end  -->
+            
+          </div>
+          <!-- card-container end -->
+
+          <!-- play bar start  -->
+          <div class="playbar">
+            <!-- seekbar start-->
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <!-- seekbar end  -->
+
+            <div class="abovebar">
+              <div class="songinfo"></div>
+              <div class="songButtons">
+                <img id="previous" src="svg/prevsong.svg" alt="previous" />
+                <img id="play" src="svg/play.svg" alt="play" />
+                <img id="next" src="svg/nextsong.svg" alt="next" />
+              </div>
+
+              <div class="timevol">
+                <div class="songtime"></div>
+                <div class="volume">
+                  <img class="volume-icon" src="svg/volume.svg" alt="volume" />
+                  <div class="range">
+                    <input type="range" name="volume" id="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- play bar end -->
+        </div>
+        <!-- spotify-playlist end  -->
+      </div>
+      <!-- right end  -->
+    </div>
+    <!-- container end / left / right  -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
