@@ -23,50 +23,48 @@ function secondsToMinutesSeconds(seconds) {
 //GET SONGS FUNCTION Fetch all songs in the songs folders
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`https://abhishekchouhan143.github.io/spotify/${folder}/`);
 
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-
-  songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split(`/${folder}/`)[1]);
+  try {
+    // Fetch the songs.json file
+    let response = await fetch(`https://abhishekchouhan143.github.io/spotify/${folder}/songs.json`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch songs: ${response.statusText}`);
     }
-  }
 
-  // Show all the songs in the playlist
-  let songUL = document
-    .querySelector(".songList")
-    .getElementsByTagName("ul")[0];
-  songUL.innerHTML = "";
-  for (const song of songs) {
-    songUL.innerHTML =
-      songUL.innerHTML +
-      `<li>
-         <img class="invert" src="svg/music.svg" alt="music" />
-     <div class="info">
-       <div>${song.replaceAll("%20", " ")}</div>
-       <div></div>
-     </div>
-     <span class="span">Play Now</span>
-     <img class="invert play-btn" src="svg/play.svg" alt="play">
-       </li>`;
-  }
+    // Parse the JSON response
+    songs = await response.json();
+    console.log("Fetched songs:", songs);
 
-  //Attach an event listNer to each songs using forEach loops.
-  Array.from(
-    document.querySelector(".songList").getElementsByTagName("li")
-  ).forEach((e) => {
-    e.addEventListener("click", (element) => {
-      palyMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
+    // Display the songs in the playlist
+    let songUL = document.querySelector(".songList ul");
+    songUL.innerHTML = "";
+    for (const song of songs) {
+      songUL.innerHTML += `
+        <li>
+          <img class="invert" src="svg/music.svg" alt="music" />
+          <div class="info">
+            <div>${song.replaceAll("%20", " ")}</div>
+            <div></div>
+          </div>
+          <span class="span">Play Now</span>
+          <img class="invert play-btn" src="svg/play.svg" alt="play">
+        </li>`;
+    }
+
+    // Attach event listeners to each song
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach((e) => {
+      e.addEventListener("click", (element) => {
+        playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
+      });
     });
-  });
+  } catch (error) {
+    console.error("Error fetching songs:", error);
+    songs = []; // Reset the songs array on error
+  }
+
   return songs;
 }
+
 
 // playMusic function start.
 const palyMusic = (track, pause = false) => {
@@ -82,7 +80,7 @@ const palyMusic = (track, pause = false) => {
 
 // START CREATE A displayAlbums function
 async function displayAlbums() {
-  let a = await fetch(`https://abhishekchouhan143.github.io/spotify/songs/ncs/songs1.mp3`);
+  let a = await fetch(`https://abhishekchouhan143.github.io/spotify/songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
